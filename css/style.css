@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
-
 body {
     background-image: url('https://cdnb.artstation.com/p/assets/images/images/012/370/613/large/steve-lund-castle-color2.jpg?1534439770'); 
     background-size: cover;
@@ -15,42 +14,83 @@ body {
     font-style: normal; 
 }
 
-.logo {
+.bar {
+  background-color: rgb(216, 146, 16);
+  height: 150px;
+  width: 75%;
+  margin-left: 200px;
+}
+
+h1{
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  font-size: 60px;
+  justify-content: center;
+  margin: 40px;
+  padding: 40px
+}
+
+    /* .logo {
     text-decoration: none;
-    color: black;
-    font-weight: bolder;
+    color: black(0, 0, 0);
+    font-weight: bold;
     display: flex;
     font-size: 60px;
     justify-content: center;
-}
+    margin: 40px;
+    padding: 40px;
+} */
 
-    #start-btn {
-    margin: 20px; 
+
+  #quiz-container {
+    border-radius: 100px;
+    margin: 400px;
+    padding: 400px;
+    border: 10px solid black;
+    display: flex;
+  }
+
+ .button-container {
+   margin-top: 5px;
+   display: flex;
+   justify-content: space-around;
+    margin-right: 20px; 
+    padding: 15px 30px;
+    font-size: 18px; 
+ }
+
+  #start-btn {
+    margin-right: 20px; 
     padding: 15px 30px;
     font-size: 18px; 
     color: white;
     background-color: red
   }
 
-    #restart-btn {
-    margin: 20px; 
-    padding: 15px 30px;
-    font-size: 18px; 
-    color: white;
-    background-color: blue
-  }
-
     #submit-btn {
-    margin: 20px; 
+    margin-left: 20px; 
     padding: 15px 30px;
     font-size: 18px; 
     color: white;
     background-color: black
   }
 
-  #quiz-container {
-    margin: 400px;
-    padding: 400px;
-    border: 10px solid black;
-    display: flex;
+  #restart-btn {
+    margin-left: 20px; 
+    padding: 15px 30px;
+    font-size: 18px; 
+    color: white;
+    background-color: blue
   }
+
+
+    /* #start-btn, #submit-btn, #restart-btn {
+    margin-right: 200px; 
+    padding: 15px 30px;
+    font-size: 18px; 
+    color: white;
+    background-color: red
+
+  } */
