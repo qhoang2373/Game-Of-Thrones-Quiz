@@ -58,3 +58,9 @@
 2. CSS
 3. JavaScript
 
+### Stretch Goals:
+1. I want to include background sound during the duration of the game and not just a click sound
+2. Quiz difficulty: Users are able to choose Easy, Medium, or Hard
+3. Alternating question: I want to have a different set of questions when users play and not have the same questions every time. 
+
+
