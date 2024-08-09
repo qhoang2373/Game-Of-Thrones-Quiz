@@ -40,3 +40,15 @@
 - IF the player scores above 70% THEN pass
 - IF the player scores below 70% THEN fail
 - Define a function to render the game message
+
+### User Stories
+
+1. As a user, I want to see the questions and answers
+2. As a user, I want to see a container with the questions
+3. As a user, I want to see a submit button
+4. As a user, I want to see my current score
+5. As a user, I want to see what question I am currently on
+6. As a user, I want to see a button that will let me play the game again
+7. As a user, I want to see whether or not I passed or failed the quiz
+8. As a user, I want to see the name of the Quiz
+9. As a user, I want to hear the audio from either a click or background sound during the game
