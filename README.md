@@ -20,3 +20,16 @@
 - Define a const for the actual question
 - Define a const for the answer options
 - Define a const for the correct answer
+
+### Variables
+
+- Define the variable for the current score
+- Define a variable for What question the user is currently on
+- Define a variable to invoke the init() function
+- Define a variable that will allow audio for a click or background sound
+
+### Event Listener
+
+- Add an event listener for the submit button
+- Add an event listener for a reset button to play again
+
