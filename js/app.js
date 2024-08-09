@@ -1,6 +1,23 @@
 
 /*-------------------------------- Constants --------------------------------*/
 
+const startButton = document.getElementById('Start-Quiz')
+const restartButton = document.getElementById('Restart-Quiz')
+const submitButton = document.getElementById('Submit')
+const clickSound = document.getElementById('click-sound')
+
+const quizContainer = document.getElementById('quiz-container');
+// const questionElement = document.getElementById('question');
+const answerList = document.getElementById('answers');
+
+const questionEls = document.querySelectorAll('.question');
+
+// - Define a const for a quiz layout/board
+// - Define a const for the actual question
+// - Define a const for the answer options
+// - Define a const for the correct answer
+
+
 /*---------------------------- Variables (state) ----------------------------*/
 
 let currentScore = 0; // - Define the variable for the current score
