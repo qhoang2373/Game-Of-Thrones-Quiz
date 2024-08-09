@@ -15,10 +15,7 @@ body {
 }
 
 .bar {
-  background-color: rgb(216, 146, 16);
-  height: 150px;
-  width: 75%;
-  margin-left: 200px;
+  background-color: rgb(209, 144, 23);
 }
 
 h1{
@@ -42,15 +39,6 @@ h1{
     margin: 40px;
     padding: 40px;
 } */
-
-
-  #quiz-container {
-    border-radius: 100px;
-    margin: 400px;
-    padding: 400px;
-    border: 10px solid black;
-    display: flex;
-  }
 
  .button-container {
    margin-top: 5px;
@@ -94,3 +82,19 @@ h1{
     background-color: red
 
   } */
+
+  #quiz-container1 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    margin: 40px;
+    width: 1150px;
+    height: 925px;
+    border-radius: 25px;
+    padding: 40px;
+    border: 10px solid black;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  

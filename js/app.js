@@ -15,6 +15,7 @@ const questions = [firstCategory, secondCategory];
 
 const questionElement = document.getElementById('question');
 
+
 const quizData = [
     {
     number: 1,
@@ -184,6 +185,7 @@ let currentScore = 0;
 let currentQuestion = 0; 
 let quizActive= false
 let gameEnded = false
+let firstCategory = ''
 
 
 // - Define a variable to invoke the init() function
