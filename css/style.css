@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 body {
-
     background-image: url('https://cdnb.artstation.com/p/assets/images/images/012/370/613/large/steve-lund-castle-color2.jpg?1534439770'); 
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -12,5 +12,25 @@ body {
     font-family: "Playfair Display SC", serif; 
     font-weight: 400;
     font-style: normal; 
-
 }
+
+.header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+/* #quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+  
+  #start-btn {
+    margin: 20px; 
+    padding: 15px 30px;
+    font-size: 18px; 
+    color: red
+  }
