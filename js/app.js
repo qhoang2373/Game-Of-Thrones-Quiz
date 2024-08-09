@@ -231,3 +231,10 @@ restartButton.addEventListener('Restart-Quiz', init)
 clickSound.addEventListener('click', () => {
     clickSound.play();
 });
+
+
+window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    audio.play();
+  });
