@@ -52,3 +52,9 @@
 7. As a user, I want to see whether or not I passed or failed the quiz
 8. As a user, I want to see the name of the Quiz
 9. As a user, I want to hear the audio from either a click or background sound during the game
+
+### Technologies Used:
+1. HTML
+2. CSS
+3. JavaScript
+
