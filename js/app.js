@@ -8,6 +8,19 @@
 
 /*-------------------------------- Functions --------------------------------*/
 
+// - Create an if-else statement for passing/failing the quiz
+// - Create a function for the question and correct answer
+// - IF the player scores above 70% THEN pass
+// - IF the player scores below 70% THEN fail
+// - Define a function to render the game message
+
+
+
+
+
+
+
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 // - Add an event listener for the submit button to input answer
@@ -22,3 +35,4 @@ restartButton.addEventListener('Restart-Quiz', init)
 // - Add an event listener for a click sound to hear a sound when clicking
 clickSound.addEventListener('click', () => {
     clickSound.play();
+});
