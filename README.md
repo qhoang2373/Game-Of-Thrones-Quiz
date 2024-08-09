@@ -33,3 +33,10 @@
 - Add an event listener for the submit button
 - Add an event listener for a reset button to play again
 
+### Function
+
+- Create an if-else statement for passing/failing the quiz
+- Create a function for the question and correct answer
+- IF the player scores above 70% THEN pass
+- IF the player scores below 70% THEN fail
+- Define a function to render the game message
