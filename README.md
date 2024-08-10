@@ -17,9 +17,11 @@
 ### Instructions on how to play:
 1. Select Category 1 or Category 1
     - Category 1 is based on Houses and Characters
-    - Category 2 is based on Characters Deahts/ endings
+    - Category 2 is based on Characters Deaths/Endings
 
-2. Metrics on how to win/lose: Get 7 correct to be crowned king or Queen and Get 3 wrong then you've been slain!
+2. Metrics on how to win/lose: 
+    - Category 1: Get 7 correct to be crowned king or Queen and Get 3 wrong then you've been slain!
+    - Category 2: Get all 10 correct to win but 3 to lose (Increased Difficulty)
 
 ### Constants
 
