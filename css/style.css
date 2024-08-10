@@ -23,22 +23,17 @@ h1{
   color: white;
   font-weight: bolder;
   display: flex;
-  font-size: 60px;
+  font-size: 90px;
   justify-content: center;
   margin: 40px;
   padding: 40px
 }
 
-    /* .logo {
-    text-decoration: none;
-    color: black(0, 0, 0);
-    font-weight: bold;
-    display: flex;
-    font-size: 60px;
-    justify-content: center;
-    margin: 40px;
-    padding: 40px;
-} */
+#answers{
+  margin-bottom: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
 
  .button-container {
    margin-top: 5px;
@@ -74,27 +69,61 @@ h1{
   }
 
 
-    /* #start-btn, #submit-btn, #restart-btn {
-    margin-right: 200px; 
-    padding: 15px 30px;
-    font-size: 18px; 
-    color: white;
-    background-color: red
-
-  } */
-
-  #quiz-container1 {
+  #quiz-container {
     position: absolute;
     top: 50px;
     right: 50px;
     margin: 40px;
     width: 1150px;
-    height: 925px;
+    height: 1050px;
     border-radius: 25px;
     padding: 40px;
-    border: 10px solid black;
+    border: 8px solid black;
     display: flex;
     flex-direction: column; 
     align-items: center; 
   }
   
+  #quiz-container h1,
+    #quiz-container ul li {
+    font-size: 55px; 
+    color: white;
+
+  }
+
+  #win-message{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+
+  }
+
+  #lose-message{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+
+  }
+
+  #category-select{
+    font-size: 16px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(233, 3, 3);
+    color: whitesmoke;
+    width: 450px;
+  }
+
+  #score-display {
+    font-weight: bolder;
+    margin-bottom: 1000px;
+  }
+
+  p {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 100px;
+    font-size: 25px;
+    width: fit-content;
+  }
