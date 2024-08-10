@@ -161,7 +161,7 @@ function render() {
     if (gameEnded) {
       if (score >= 7) {
         winMessage.textContent = 'Congrats! You are the new Ruler';
-      } else if (wrongAnswers > 3) {
+      } else if (wrongAnswers >= 3) {
         loseMessage.textContent = "You've been slain'";
       }
 
@@ -205,27 +205,20 @@ function checkAnswer(selectAnswer) {
       }
     }
     currentQuestion++;
-
-    if (currentQuestion >= questions[currentCategory].length || score >= 7) {
-        gameEnded = true;
-        if (score >= 7) {
-          winMessage.textContent = "Congrats! You are the new Ruler!";
-        } else {
-          loseMessage.textContent = "You've been slain!";
-        }
-      } else {
   
-    render();
+    if (currentQuestion >= questions[currentCategory].length || score >= 7) {
+      gameEnded = true;
+      if (score >= 7) {
+        winMessage.textContent = "Congrats! You are the new Ruler!";
+      } else {
+        loseMessage.textContent = "You've been slain!";
+      }
+    } else {
+      loadQuestion();
+    }
+  
+    render(); 
   }
-
-  currentQuestion++
-  if (currentQuestion < questions[currentCategory].length && wrongAnswers < 20) {
-      loadQuestion()
-  } else {
-      gameEnded = true
-  }
-  render();
-}
 
 function startQuiz() {
     quizActive = true
