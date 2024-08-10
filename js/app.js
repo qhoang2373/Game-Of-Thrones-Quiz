@@ -218,42 +218,33 @@ function loadQuestion() {
 }
 
 function checkAnswer(selectAnswer) {
-    const currentQuizData = questions[currentCategory][currentQuestion]
+    const currentQuizData = questions[currentCategory][currentQuestion];
     if (selectAnswer === currentQuizData.correctAnswer) {
-        score++;
+      score++;
     } else {
-        wrongAnswers++;
-        if (wrongAnswers >= 3) {
-            gameEnded = true;
-            loseMessage.textContent = "You've been slain!";
-          }
-        }
-        currentQuestion++;
+      wrongAnswers++;
+      if (wrongAnswers >= 3) {
+        gameEnded = true;
+        loseMessage.textContent = "You've been slain!";
+      }
+    }
+    currentQuestion++;
 
-
-        if (currentQuestion >= questions[currentCategory].length || score >= 7) {
-            gameEnded = true;
-            if (score >= 7) {
-              winMessage.textContent = "Congrats! You are the new Ruler!";
-            } else {
-              loseMessage.textContent = "You've been slain!";
-            }
-          } else {
-            
-          render();
+    if (currentQuestion >= questions[currentCategory].length || score >= 7) {
+        gameEnded = true;
+        if (score >= 7) {
+          winMessage.textContent = "Congrats! You are the new Ruler!";
+        } else {
+          loseMessage.textContent = "You've been slain!";
         }
-      
-        // if (currentQuestion < questions[currentCategory].length) {
-        //   loadQuestion();
-        // } else {
-        //   gameEnded = true;
-        // }
-      
-        // render();
+      } else {
+  
+    render();
+  }
 
 
     currentQuestion++
-    if (currentQuestion < questions[currentCategory].length && wrongAnswers < 3) {
+    if (currentQuestion < questions[currentCategory].length && wrongAnswers < 10) {
         loadQuestion()
     } else {
         gameEnded = true

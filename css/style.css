@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 body {
-    background-image: url('https://cdnb.artstation.com/p/assets/images/images/012/370/613/large/steve-lund-castle-color2.jpg?1534439770'); 
+    background-image: url('https://cdn.suwalls.com/wallpapers/minimalistic/game-of-thrones-26910-1920x1200.jpg'); 
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -15,18 +15,33 @@ body {
 }
 
 .bar {
-  background-color: rgb(209, 144, 23);
+  background-color: rgb(117, 98, 98);
 }
 
 h1{
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bolder;
   display: flex;
   font-size: 90px;
   justify-content: center;
   margin: 40px;
   padding: 40px
+}
+
+ul{
+  font-size: 100px; 
+  color: black;
+
+
+}
+
+button{
+  margin-right: 20px; 
+  padding: 25px 55px;
+  font-size: 18px; 
+  color: white;
+  background-color: black
 }
 
 #answers{
@@ -69,7 +84,7 @@ h1{
   }
 
 
-  /* #quiz-container {
+  #quiz-container {
     position: absolute;
     top: 50px;
     right: 50px;
@@ -87,22 +102,23 @@ h1{
   #quiz-container h1,
     #quiz-container ul li {
     font-size: 55px; 
-    color: white;
+    color: black;
 
-  } */
+  }
 
   #win-message{
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 100px;
+    font-size: 75px;
 
   }
 
   #lose-message{
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
-
+    margin-top: 100px;
+    font-size: 75px;
   }
 
   #category-select{
