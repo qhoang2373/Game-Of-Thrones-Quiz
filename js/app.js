@@ -177,3 +177,11 @@ function render() {
       loseMessage.textContent = '';
     }
   }
+
+  function loadQuestion() {
+    if (currentQuestion >= question.length) {
+        return;
+    }
+    const currentQuizData = questions[currentCategory][currentQuestion];
+    question.textContent = currentQuizData.question
+
