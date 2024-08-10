@@ -15,7 +15,7 @@
     2. Character Deaths/Ending
 
 ### Instructions on how to play:
-1. Select Category 1 or Category 1
+1. Select Category 1 or Category 2
     - Category 1 is based on Houses and Characters
     - Category 2 is based on Characters Deaths/Endings
 
