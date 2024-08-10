@@ -217,3 +217,12 @@ function checkAnswer(selectAnswer) {
   
     render();
   }
+
+  currentQuestion++
+  if (currentQuestion < questions[currentCategory].length && wrongAnswers < 20) {
+      loadQuestion()
+  } else {
+      gameEnded = true
+  }
+  render();
+}
