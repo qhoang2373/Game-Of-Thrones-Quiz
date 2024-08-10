@@ -156,3 +156,11 @@ let questions = {
 function init() {
     render()
 }
+
+function render() {
+    if (gameEnded) {
+      if (score >= 7) {
+        winMessage.textContent = 'Congrats! You are the new Ruler';
+      } else if (wrongAnswers > 3) {
+        loseMessage.textContent = "You've been slain'";
+      }
