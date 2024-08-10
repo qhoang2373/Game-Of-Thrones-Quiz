@@ -152,3 +152,7 @@ let questions = {
     },
     ]   
 };
+
+function init() {
+    render()
+}
