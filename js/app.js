@@ -192,3 +192,28 @@ function render() {
         choices.appendChild(li)
     })
 }
+
+function checkAnswer(selectAnswer) {
+    const currentQuizData = questions[currentCategory][currentQuestion];
+    if (selectAnswer === currentQuizData.correctAnswer) {
+      score++;
+    } else {
+      wrongAnswers++;
+      if (wrongAnswers >= 3) {
+        gameEnded = true;
+        loseMessage.textContent = "You've been slain!";
+      }
+    }
+    currentQuestion++;
+
+    if (currentQuestion >= questions[currentCategory].length || score >= 7) {
+        gameEnded = true;
+        if (score >= 7) {
+          winMessage.textContent = "Congrats! You are the new Ruler!";
+        } else {
+          loseMessage.textContent = "You've been slain!";
+        }
+      } else {
+  
+    render();
+  }
