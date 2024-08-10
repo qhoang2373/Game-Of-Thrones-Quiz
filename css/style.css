@@ -32,7 +32,6 @@ h1{
 ul{
   font-size: 100px; 
   color: black;
-
 }
 
 button{
@@ -81,28 +80,6 @@ button{
     color: white;
     background-color: blue
   }
-
-  /* #quiz-container {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    margin: 40px;
-    width: 1150px;
-    height: 1050px;
-    border-radius: 25px;
-    padding: 40px;
-    border: 8px solid black;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-  }
-  
-  #quiz-container h1,
-    #quiz-container ul li {
-    font-size: 55px; 
-    color: black;
-
-  } */
 
   #win-message{
     font-weight: bold;
