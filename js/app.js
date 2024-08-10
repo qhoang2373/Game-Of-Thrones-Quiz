@@ -185,3 +185,10 @@ function render() {
     const currentQuizData = questions[currentCategory][currentQuestion];
     question.textContent = currentQuizData.question
 
+    choices.innerHTML = ''
+    currentQuizData.choices.forEach(choice => {
+        const li = document.createElement('li')
+        li.textContent = choice
+        choices.appendChild(li)
+    })
+}
