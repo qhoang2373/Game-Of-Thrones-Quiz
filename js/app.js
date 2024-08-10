@@ -242,3 +242,27 @@ function resetQuiz() {
     loseMessage.textContent = ''
     location.reload()
 }
+
+categorySelect.addEventListener('change', handleCategoryChange)
+
+function handleCategoryChange(event) {
+    currentCategory = event.target.value
+    currentQuestion = 0
+    render()
+}
+
+startButton.addEventListener('click', startQuiz)
+submitButton.addEventListener('click', () => {
+    if (quizActive) {
+        checkAnswer()
+    }
+})
+
+restartButton.addEventListener('click', resetQuiz)
+
+choices.addEventListener('click', (event) => {
+    const selectAnswer = event.target.textContent
+    checkAnswer(selectAnswer)
+})
+
+init()
