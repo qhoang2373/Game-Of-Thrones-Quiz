@@ -69,7 +69,7 @@ h1{
   }
 
 
-  #quiz-container {
+  /* #quiz-container {
     position: absolute;
     top: 50px;
     right: 50px;
@@ -89,7 +89,7 @@ h1{
     font-size: 55px; 
     color: white;
 
-  }
+  } */
 
   #win-message{
     font-weight: bold;
