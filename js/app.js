@@ -226,3 +226,19 @@ function checkAnswer(selectAnswer) {
   }
   render();
 }
+
+function startQuiz() {
+    quizActive = true
+    render()
+}
+
+function resetQuiz() {
+    currentQuestion = 0
+    score = 0
+    wrongAnswers = 0
+    quizActive = false
+    gameEnded = false
+    winMessage.textContent = ''
+    loseMessage.textContent = ''
+    location.reload()
+}
