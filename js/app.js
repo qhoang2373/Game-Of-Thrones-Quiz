@@ -164,3 +164,16 @@ function render() {
       } else if (wrongAnswers > 3) {
         loseMessage.textContent = "You've been slain'";
       }
+
+      submitButton.style.display = 'none';
+      restartButton.style.display = 'block';
+    } else if (quizActive) {
+      loadQuestion();
+    } else {
+      startButton.style.display = 'block';
+      submitButton.style.display = 'none';
+      restartButton.style.display = 'none';
+      winMessage.textContent = '';
+      loseMessage.textContent = '';
+    }
+  }
