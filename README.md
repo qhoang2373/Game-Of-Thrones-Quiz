@@ -21,7 +21,7 @@
 
 2. Metrics on how to win/lose: 
     - Category 1: Get 7 correct to be crowned king or Queen and Get 3 wrong then you've been slain!
-    - Category 2: Get all 10 correct to win (Inreased Difficulty)
+    - Category 2: Get 8 to win (Inreased Difficulty)
 
 ### Constants
 
