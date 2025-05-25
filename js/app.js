@@ -6,6 +6,8 @@ const choices = document.getElementById('answer-choices');
 const winMessage = document.getElementById('win-message');
 const loseMessage = document.getElementById('lose-message');
 const categorySelect = document.getElementById('category-select');
+const myAudio = document.getElementById('myAudio');
+const playThemeButton = document.getElementById('play-theme-btn');
 
 let currentQuestion = 0;
 let score = 0;
@@ -256,6 +258,10 @@ restartButton.addEventListener('click', resetQuiz)
 choices.addEventListener('click', (event) => {
     const selectAnswer = event.target.textContent
     checkAnswer(selectAnswer)
-})
+});
+
+playThemeButton.addEventListener('click', () => {
+    myAudio.play();
+});
 
 init()
