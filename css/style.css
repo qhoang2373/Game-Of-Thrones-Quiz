@@ -1,6 +1,11 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
+/* Universal Box Sizing - ADD THIS AT THE TOP */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Custom Properties */
 :root {
     --font-primary: "Playfair Display SC", serif;
@@ -23,7 +28,7 @@
     --spacing-message-margin-top: 100px;
     --spacing-answers-margin-bottom: 50px;
     --spacing-paragraph-margin-bottom: 100px;
-    --spacing-score-margin-bottom: 1000px; 
+    --spacing-score-margin-bottom: 1000px;
 
     --font-size-xs: 16px;
     --font-size-sm: 18px;
@@ -34,32 +39,32 @@
 
     --font-weight-normal: 400;
     --font-weight-bold: bold;
-    --font-weight-bolder: bolder; 
+    --font-weight-bolder: bolder;
 }
 
 /* Layout */
 body {
-    background-image: url('https://cdn.suwalls.com/wallpapers/minimalistic/game-of-thrones-26910-1920x1200.jpg'); 
-    background-size: cover; 
+    background-image: url('https://cdn.suwalls.com/wallpapers/minimalistic/game-of-thrones-26910-1920x1200.jpg');
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    height: 100vh; 
+    height: 100vh;
     margin: 0;
-    font-family: var(--font-primary); 
+    font-family: var(--font-primary);
     font-weight: var(--font-weight-normal);
-    font-style: normal; 
+    font-style: normal;
 }
 
-.bar { /* Consider a more descriptive name, e.g., .header-bar or .footer-bar if applicable */
+.bar {
   background-color: var(--color-grey-bar);
 }
 
 /* Typography */
 h1 {
   text-decoration: none;
-  color: var(--color-black); /* Changed for better contrast on background image */
+  color: var(--color-white); 
   font-weight: var(--font-weight-bolder);
   display: flex;
   font-size: var(--font-size-xl);
@@ -70,40 +75,102 @@ h1 {
 
 /* Specific style for H1 inside the .bar to ensure contrast */
 .bar h1 {
-  color: var(--color-white); /* Ensures contrast against the dark bar background */
+  color: var(--color-white); 
 }
 
-ul {
-  font-size: var(--font-size-xxl);
-  color: var(--color-black); /* Changed to black */
+/* SOLUTION FOR QUIZ QUESTION (H1 WITH ID="QUESTION") */
+#question {
+    color: var(--color-black); 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: var(--spacing-md); 
+    border-radius: 8px; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+    font-size: var(--font-size-lg); 
+    max-width: 90%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+#answer-choices { /* Target the ul container for answers */
+    font-size: var(--font-size-xxl); 
+    color: var(--color-black); 
+    list-style: none; 
+    padding: 0;
+    margin: 0 auto var(--spacing-answers-margin-bottom) auto; 
+    width: fit-content; 
+    max-width: 90%;
+    text-align: center; 
+}
+
+/* Apply background and other styles directly to the list items for answers */
+#answer-choices li {
+    color: var(--color-black); 
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm); 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: var(--font-size-md); 
+    text-align: center;
+}
+
+#answer-choices li:hover {
+    background-color: rgba(255, 255, 255, 0.95); 
+}
+
+/* General paragraph styling - ensure this is black and readable if you have other paragraphs */
 p {
   font-weight: var(--font-weight-bold);
   text-align: left;
   margin-bottom: var(--spacing-paragraph-margin-bottom);
   font-size: var(--font-size-md);
-  width: fit-content; /* Adjusts width to content */
-  color: var(--color-black); /* Changed to black */
+  width: fit-content;
+  color: var(--color-black); 
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: var(--spacing-sm);
+  border-radius: 5px;
 }
 
-/* Buttons */
-button, .btn { /* General button styling */
-  padding: var(--spacing-md) var(--spacing-xxl); /* Standardized padding */
-  font-size: var(--font-size-sm); 
-  color: var(--color-white);
-  background-color: var(--color-black); /* Default background */
-  margin: 0 var(--spacing-sm); /* Adjusted margin for spacing within button-container */
-  border: none; /* Assuming no border is desired */
-  cursor: pointer; /* Add pointer cursor for better UX */
+/* Container for initial controls (category select, play theme, start quiz) */
+#initial-controls {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: var(--spacing-md); 
+    margin-top: var(--spacing-xxl); 
+    padding: var(--spacing-md); 
+    max-width: 90%; 
+    width: fit-content; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-.button-container {
-   margin-top: var(--spacing-xs);
-   display: flex;
-   justify-content: center; /* Center buttons in the container */
-   padding: var(--spacing-md) 0; /* Add some padding to the container */
- }
+/* General button styling */
+button, .btn {
+    padding: var(--spacing-md) var(--spacing-xxl); 
+    font-size: var(--font-size-sm);
+    color: var(--color-white);
+    background-color: var(--color-black); 
+    margin: 0; 
+    border: none;
+    cursor: pointer;
+}
+
+/* Category select dropdown styling */
+#category-select {
+    font-size: var(--font-size-sm); 
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+    border-radius: 4px;
+    background-color: var(--color-category-bg);
+    color: var(--color-category-text);
+    width: 450px; 
+}
 
 /* Modifier classes for specific button styles */
 .btn-start {
@@ -111,7 +178,7 @@ button, .btn { /* General button styling */
 }
 
 .btn-submit {
-    background-color: var(--color-black); /* This is the default, but can be explicit */
+    background-color: var(--color-black);
 }
 
 .btn-restart {
@@ -119,41 +186,23 @@ button, .btn { /* General button styling */
 }
 
 /* Quiz Components */
-#answers { /* Container for quiz answers */
-  margin-bottom: var(--spacing-answers-margin-bottom);
-  /* justify-content and align-items removed as it's likely a block container for ul > li */
+#answers { 
+    margin-bottom: var(--spacing-answers-margin-bottom);
 }
 
-.message { /* Common styles for win/lose messages */
+.message { 
     font-weight: var(--font-weight-bold);
     text-align: center;
     margin-top: var(--spacing-message-margin-top);
     font-size: var(--font-size-lg);
-    color: var(--color-white); /* Changed for better contrast on background image */
+    color: var(--color-white);
 }
 
-#win-message { /* Message displayed on winning */
-    /* Specific styles for win-message can go here if any */
-}
 
-#lose-message { /* Message displayed on losing */
-    /* Specific styles for lose-message can go here if any */
-}
-
-#category-select { /* Dropdown for category selection */
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-border-light);
-    border-radius: 4px;
-    background-color: var(--color-category-bg); /* Consider using a less jarring color or ensuring good contrast */
-    color: var(--color-category-text);
-    width: 450px;
-}
-
-#score-display { /* Displays the current score */
+#score-display { 
     font-weight: var(--font-weight-bolder);
-    margin-bottom: var(--spacing-score-margin-bottom); /* This is a very large margin, might be unintentional */
-    color: var(--color-white); /* Changed for better contrast on background image */
+    margin-bottom: var(--spacing-score-margin-bottom); 
+    color: var(--color-white);
 }
 
 /* Media Queries for Responsiveness */
@@ -165,60 +214,83 @@ button, .btn { /* General button styling */
         --spacing-message-margin-top: 60px;
         --spacing-answers-margin-bottom: 30px;
         --spacing-paragraph-margin-bottom: 60px;
-        --spacing-score-margin-bottom: 600px; /* Adjusted large margin */
+        --spacing-score-margin-bottom: 600px; 
 
-        --font-size-md: 20px; /* p */
-        --font-size-lg: 50px; /* .message */
-        --font-size-xl: 60px; /* h1 */
-        --font-size-xxl: 70px; /* ul */
+        --font-size-md: 20px; 
+        --font-size-lg: 50px; 
+        --font-size-xl: 60px; 
+        --font-size-xxl: 70px; 
     }
 
     body {
-        justify-content: flex-start; /* Adjust alignment for potentially scrollable content */
-        height: auto; /* Allow body to grow with content */
+        justify-content: flex-start;
+        height: auto;
         padding-top: var(--spacing-lg);
         padding-bottom: var(--spacing-lg);
     }
 
     h1 {
       margin: var(--spacing-header-margin);
-      padding: var(--spacing-lg); /* Reduced padding */
-      text-align: center; /* Ensure heading is centered */
+      padding: var(--spacing-lg);
+      text-align: center;
     }
-    
+
     p {
       margin-left: var(--spacing-md);
       margin-right: var(--spacing-md);
-      text-align: center; /* Center paragraph text */
+      text-align: center;
+      color: var(--color-black);
+      background-color: rgba(255, 255, 255, 0.7);
     }
 
     ul {
       margin-left: var(--spacing-md);
       margin-right: var(--spacing-md);
-      text-align: center; /* Center list items if they are inline-block or similar */
+      text-align: center;
+      color: var(--color-black);
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    #question {
+        color: var(--color-black);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: var(--spacing-sm);
+        border-radius: 5px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #answer-choices li {
+        color: var(--color-black);
+        background-color: rgba(255, 255, 255, 0.85);
     }
 
     .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons in the column */
+        flex-direction: column;
+        align-items: center;
         padding: var(--spacing-md) 0;
     }
 
     button, .btn {
-        margin: var(--spacing-sm) 0; /* Add vertical margin */
-        width: 80%; /* Make buttons wider for easier tapping */
-        padding: var(--spacing-md); /* Adjust padding */
+        width: 80%;
+        padding: var(--spacing-md);
+        margin: var(--spacing-sm) 0;
     }
 
     #category-select {
-        width: 80%; /* Make category select wider */
-        margin-left: auto;
-        margin-right: auto;
-        display: block; /* Ensure it takes up its own line and centers */
+        width: 90%;
+        font-size: var(--font-size-sm); 
+    }
+
+    #initial-controls {
+        flex-direction: column; 
+        gap: var(--spacing-sm);
     }
 
     #score-display {
-        text-align: center; /* Center score display */
+        text-align: center;
         width: 100%;
     }
 }
@@ -230,32 +302,60 @@ button, .btn { /* General button styling */
         --spacing-message-margin-top: 40px;
         --spacing-answers-margin-bottom: 20px;
         --spacing-paragraph-margin-bottom: 40px;
-        --spacing-score-margin-bottom: 400px; /* Further adjusted large margin */
+        --spacing-score-margin-bottom: 400px; 
 
-        --font-size-xs: 14px; /* category-select */
-        --font-size-sm: 16px; /* buttons */
-        --font-size-md: 18px; /* p */
-        --font-size-lg: 35px; /* .message */
-        --font-size-xl: 40px; /* h1 */
-        --font-size-xxl: 50px; /* ul */
+        --font-size-xs: 14px; 
+        --font-size-sm: 16px; 
+        --font-size-md: 18px; 
+        --font-size-lg: 35px; 
+        --font-size-xl: 40px; 
+        --font-size-xxl: 50px; 
     }
 
     h1 {
-      padding: var(--spacing-md); /* Further reduced padding */
+      padding: var(--spacing-md);
     }
 
     button, .btn {
-        width: 90%; /* Make buttons take more width */
+        width: 90%;
         padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm); 
     }
 
     #category-select {
         width: 90%;
-        font-size: var(--font-size-xs); /* Adjust font size for category select */
+        font-size: var(--font-size-sm); 
         padding: var(--spacing-sm);
     }
 
     p {
-      margin-bottom: var(--spacing-lg); /* Adjust paragraph margin */
+      margin-bottom: var(--spacing-lg);
+      color: var(--color-black);
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    ul {
+      color: var(--color-black);
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    #question {
+        color: var(--color-black);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: var(--spacing-sm);
+        border-radius: 5px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #answer-choices li {
+        color: var(--color-black);
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    #initial-controls {
+        gap: var(--spacing-xs);
     }
 }
