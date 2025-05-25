@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 
 body {
     background-image: url('https://cdn.suwalls.com/wallpapers/minimalistic/game-of-thrones-26910-1920x1200.jpg'); 
@@ -118,3 +119,269 @@ button{
     font-size: 25px;
     width: fit-content;
   }
+
+  */
+
+  
+
+  /* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* Custom Properties */
+:root {
+    --font-primary: "Playfair Display SC", serif;
+    --color-black: black;
+    --color-white: white;
+    --color-red: red;
+    --color-blue: blue;
+    --color-grey-bar: rgb(117, 98, 98);
+    --color-category-bg: rgb(233, 3, 3);
+    --color-category-text: whitesmoke;
+    --color-border-light: #ccc;
+
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 25px;
+    --spacing-xxl: 30px;
+    --spacing-header-margin: 40px;
+    --spacing-message-margin-top: 100px;
+    --spacing-answers-margin-bottom: 50px;
+    --spacing-paragraph-margin-bottom: 100px;
+    --spacing-score-margin-bottom: 1000px; /* Review this large margin */
+
+    --font-size-xs: 16px;
+    --font-size-sm: 18px;
+    --font-size-md: 25px;
+    --font-size-lg: 75px;
+    --font-size-xl: 90px;
+    --font-size-xxl: 100px;
+
+    --font-weight-normal: 400;
+    --font-weight-bold: bold;
+    --font-weight-bolder: bolder; /* Note: 'bolder' is relative to parent; consider numeric value */
+}
+
+/* Layout */
+body {
+    background-image: url('https://cdn.suwalls.com/wallpapers/minimalistic/game-of-thrones-26910-1920x1200.jpg'); 
+    background-size: cover; /* Ensures the background image covers the entire body */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    font-family: var(--font-primary); 
+    font-weight: var(--font-weight-normal);
+    font-style: normal; 
+}
+
+.bar { /* Consider a more descriptive name, e.g., .header-bar or .footer-bar if applicable */
+  background-color: var(--color-grey-bar);
+}
+
+/* Typography */
+h1 {
+  text-decoration: none;
+  color: var(--color-white); /* Changed for better contrast on background image */
+  font-weight: var(--font-weight-bolder);
+  display: flex;
+  font-size: var(--font-size-xl);
+  justify-content: center;
+  margin: var(--spacing-header-margin);
+  padding: var(--spacing-header-margin);
+}
+
+/* Specific style for H1 inside the .bar to ensure contrast */
+.bar h1 {
+  color: var(--color-white); /* Ensures contrast against the dark bar background */
+}
+
+ul { /* This seems to be styling for the quiz answers, consider a more specific selector like #answers ul */
+  font-size: var(--font-size-xxl); 
+  color: var(--color-white); /* Changed for better contrast on background image */
+}
+
+p {
+  font-weight: var(--font-weight-bold);
+  text-align: left;
+  margin-bottom: var(--spacing-paragraph-margin-bottom);
+  font-size: var(--font-size-md);
+  width: fit-content; /* Adjusts width to content */
+  color: var(--color-white); /* Changed for better contrast on background image */
+}
+
+/* Buttons */
+button, .btn { /* General button styling */
+  padding: var(--spacing-md) var(--spacing-xxl); /* Standardized padding */
+  font-size: var(--font-size-sm); 
+  color: var(--color-white);
+  background-color: var(--color-black); /* Default background */
+  margin: 0 var(--spacing-sm); /* Adjusted margin for spacing within button-container */
+  border: none; /* Assuming no border is desired */
+  cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+.button-container {
+   margin-top: var(--spacing-xs);
+   display: flex;
+   justify-content: center; /* Center buttons in the container */
+   padding: var(--spacing-md) 0; /* Add some padding to the container */
+ }
+
+/* Modifier classes for specific button styles */
+.btn-start {
+    background-color: var(--color-red);
+}
+
+.btn-submit {
+    background-color: var(--color-black); /* This is the default, but can be explicit */
+}
+
+.btn-restart {
+    background-color: var(--color-blue);
+}
+
+/* Quiz Components */
+#answers { /* Container for quiz answers */
+  margin-bottom: var(--spacing-answers-margin-bottom);
+  /* justify-content and align-items removed as it's likely a block container for ul > li */
+}
+
+.message { /* Common styles for win/lose messages */
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-top: var(--spacing-message-margin-top);
+    font-size: var(--font-size-lg);
+    color: var(--color-white); /* Changed for better contrast on background image */
+}
+
+#win-message { /* Message displayed on winning */
+    /* Specific styles for win-message can go here if any */
+}
+
+#lose-message { /* Message displayed on losing */
+    /* Specific styles for lose-message can go here if any */
+}
+
+#category-select { /* Dropdown for category selection */
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+    border-radius: 4px;
+    background-color: var(--color-category-bg); /* Consider using a less jarring color or ensuring good contrast */
+    color: var(--color-category-text);
+    width: 450px;
+}
+
+#score-display { /* Displays the current score */
+    font-weight: var(--font-weight-bolder);
+    margin-bottom: var(--spacing-score-margin-bottom); /* This is a very large margin, might be unintentional */
+    color: var(--color-white); /* Changed for better contrast on background image */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet devices (max-width: 768px) */
+@media (max-width: 768px) {
+    :root {
+        --spacing-header-margin: 20px;
+        --spacing-message-margin-top: 60px;
+        --spacing-answers-margin-bottom: 30px;
+        --spacing-paragraph-margin-bottom: 60px;
+        --spacing-score-margin-bottom: 600px; /* Adjusted large margin */
+
+        --font-size-md: 20px; /* p */
+        --font-size-lg: 50px; /* .message */
+        --font-size-xl: 60px; /* h1 */
+        --font-size-xxl: 70px; /* ul */
+    }
+
+    body {
+        justify-content: flex-start; /* Adjust alignment for potentially scrollable content */
+        height: auto; /* Allow body to grow with content */
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+
+    h1 {
+      margin: var(--spacing-header-margin);
+      padding: var(--spacing-lg); /* Reduced padding */
+      text-align: center; /* Ensure heading is centered */
+    }
+    
+    p {
+      margin-left: var(--spacing-md);
+      margin-right: var(--spacing-md);
+      text-align: center; /* Center paragraph text */
+    }
+
+    ul {
+      margin-left: var(--spacing-md);
+      margin-right: var(--spacing-md);
+      text-align: center; /* Center list items if they are inline-block or similar */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons in the column */
+        padding: var(--spacing-md) 0;
+    }
+
+    button, .btn {
+        margin: var(--spacing-sm) 0; /* Add vertical margin */
+        width: 80%; /* Make buttons wider for easier tapping */
+        padding: var(--spacing-md); /* Adjust padding */
+    }
+
+    #category-select {
+        width: 80%; /* Make category select wider */
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Ensure it takes up its own line and centers */
+    }
+
+    #score-display {
+        text-align: center; /* Center score display */
+        width: 100%;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-header-margin: 15px;
+        --spacing-message-margin-top: 40px;
+        --spacing-answers-margin-bottom: 20px;
+        --spacing-paragraph-margin-bottom: 40px;
+        --spacing-score-margin-bottom: 400px; /* Further adjusted large margin */
+
+        --font-size-xs: 14px; /* category-select */
+        --font-size-sm: 16px; /* buttons */
+        --font-size-md: 18px; /* p */
+        --font-size-lg: 35px; /* .message */
+        --font-size-xl: 40px; /* h1 */
+        --font-size-xxl: 50px; /* ul */
+    }
+
+    h1 {
+      padding: var(--spacing-md); /* Further reduced padding */
+    }
+
+    button, .btn {
+        width: 90%; /* Make buttons take more width */
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    #category-select {
+        width: 90%;
+        font-size: var(--font-size-xs); /* Adjust font size for category select */
+        padding: var(--spacing-sm);
+    }
+
+    p {
+      margin-bottom: var(--spacing-lg); /* Adjust paragraph margin */
+    }
+}
